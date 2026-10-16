@@ -1,0 +1,296 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Dhoni Videos | Rohit Nayak</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    background: #111827;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #facc15;
+}
+
+header span {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.hero {
+    padding: 55px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a, #111827);
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    max-width: 500px;
+    display: flex;
+    margin: auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 13px 18px;
+    background: #facc15;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    font-weight: bold;
+}
+
+.section {
+    padding: 30px 5%;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #facc15;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #dc2626;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.card a:hover {
+    background: #b91c1c;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #cbd5e1;
+    margin-top: 25px;
+}
+
+footer strong {
+    color: #facc15;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏏 MS DHONI <span>VIDEOS</span></h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Welcome to MS Dhoni Fan Website</h2>
+    <p>Captain Cool के शानदार क्रिकेट वीडियो यहाँ देखें!</p>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="वीडियो खोजें..."
+            oninput="searchVideos()"
+        >
+        <button onclick="searchVideos()">Search</button>
+    </div>
+</section>
+
+<section class="section" id="videos">
+    <h2>🔥 MS Dhoni Best Videos</h2>
+
+    <div class="videos" id="videoList">
+
+        <div class="card">
+            <img
+                src="https://img.youtube.com/vi/6pVJQ9lG8wE/hqdefault.jpg"
+                alt="MS Dhoni cricket video"
+                loading="lazy"
+            >
+            <div class="card-content">
+                <h3>MS Dhoni Cricket Highlights</h3>
+                <a href="https://www.youtube.com/results?search_query=MS+Dhoni+cricket+highlights"
+                   target="_blank" rel="noopener noreferrer">
+                   ▶ Watch on YouTube
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://img.youtube.com/vi/1VbZE6YhjKk/hqdefault.jpg"
+                alt="MS Dhoni batting"
+                loading="lazy"
+            >
+            <div class="card-content">
+                <h3>MS Dhoni Best Batting</h3>
+                <a href="https://www.youtube.com/results?search_query=MS+Dhoni+best+batting"
+                   target="_blank" rel="noopener noreferrer">
+                   ▶ Watch on YouTube
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://img.youtube.com/vi/4QH7H5G0V3U/hqdefault.jpg"
+                alt="MS Dhoni finishing shots"
+                loading="lazy"
+            >
+            <div class="card-content">
+                <h3>MS Dhoni Finishing Shots</h3>
+                <a href="https://www.youtube.com/results?search_query=MS+Dhoni+finishing+shots"
+                   target="_blank" rel="noopener noreferrer">
+                   ▶ Watch on YouTube
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://img.youtube.com/vi/MS1Y7a1Q8mA/hqdefault.jpg"
+                alt="MS Dhoni helicopter shot"
+                loading="lazy"
+            >
+            <div class="card-content">
+                <h3>MS Dhoni Helicopter Shot</h3>
+                <a href="https://www.youtube.com/results?search_query=MS+Dhoni+helicopter+shot"
+                   target="_blank" rel="noopener noreferrer">
+                   ▶ Watch on YouTube
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About This Website</h2>
+    <p>
+        यह वेबसाइट MS Dhoni के प्रशंसकों के लिए बनाई गई है।
+        यहाँ आप YouTube पर उनके क्रिकेट वीडियो खोज सकते हैं।
+    </p>
+</section>
+
+<footer>
+    <p>Created with ❤️ by <strong>Rohit Nayak</strong></p>
+    <p>MS Dhoni Fan Website | 2026</p>
+</footer>
+
+<script>
+function searchVideos() {
+    const input = document.getElementById("search")
+        .value.toLowerCase().trim();
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        const title = card.querySelector("h3")
+            .textContent.toLowerCase();
+
+        card.style.display = title.includes(input)
+            ? ""
+            : "none";
+    });
+}
+</script>
+
+</body>
+</html>
+```
